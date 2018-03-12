@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hcz.hechangzhi.RivermapActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_b"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:background="@drawable/rb_map_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="标准"
+            android:textColor="@color/rb_txt_selector"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radio_w"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:background="@drawable/rb_map_right"
+            android:button="@null"
+            android:gravity="center"
+            android:text="卫星"
+            android:textColor="@color/rb_txt_selector"
+            android:textSize="12sp" />
+    </RadioGroup>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.example.hcz.hechangzhi"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+        mavenCentral()
+//        jcenter() // 或者 mavenCentral()
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/MobCommons-2017.0607.1736.jar')
+    compile name: 'SMSSDK-3.0.0', ext: 'aar'
+    compile files('libs/Android_Map3D_SDK_V5.5.0_20171107.jar')
+    compile project(':fresco-photoview')
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support:support-v4:26.0.0-alpha1'
+    compile 'com.squareup.okhttp:okhttp:latest.integration'
+    compile 'com.alibaba:fastjson:1.2.41'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.amap.api:search:latest.integration'
+    compile 'com.github.PhilJay:MPAndroidChart:latest.integration'
+    compile 'com.amap.api:location:latest.integration'
+    compile 'com.aliyun.ams:alicloud-android-push:3.0.11@aar'
+    compile 'com.aliyun.ams:alicloud-android-utdid:1.1.5.3'
+    compile 'com.aliyun.ams:alicloud-android-ut:5.1.0'
+    compile 'com.youth.banner:banner:latest.integration'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-5'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+}

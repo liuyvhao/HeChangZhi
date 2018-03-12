@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hcz.hechangzhi.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/title_bar" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_bar"
+            android:layout_marginBottom="48dp"
+            android:layout_weight="1.0" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="48dp"
+            android:background="@color/colorAccent" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/hedao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="-2dp"
+                android:drawableTop="@drawable/radiobutton_hedao"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="河道管理"
+                android:textColor="@color/radio_txt_selector"
+                android:textSize="10sp" />
+
+            <!--<RadioButton-->
+            <!--android:id="@+id/tousu"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:button="@null"-->
+            <!--android:drawableTop="@drawable/radiobutton_tousu"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:text="投诉公示"-->
+            <!--android:textColor="@color/radio_txt_selector"-->
+            <!--android:textSize="10sp" />-->
+
+            <RadioButton
+                android:id="@+id/dongtai"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="-2dp"
+                android:drawableTop="@drawable/radiobutton_news"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="治水动态"
+                android:textColor="@color/radio_txt_selector"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/usercenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="-2dp"
+                android:drawableTop="@drawable/radiobutton_usercenter"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="河长中心"
+                android:textColor="@color/radio_txt_selector"
+                android:textSize="10sp" />
+        </RadioGroup>
+    </RelativeLayout>
+</TabHost>

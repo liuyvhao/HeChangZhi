@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbg"
+    android:orientation="vertical"
+    tools:context="com.example.hcz.hechangzhi.PollutionActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="48dp" />
+
+    <SlidingDrawer
+        android:id="@+id/slidngdrawer"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentBottom="true"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@id/handle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:alpha="0.5"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="污染源名称"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所在区域"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="类别"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/up" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorbg"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorAccent" />
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorbg" />
+        </LinearLayout>
+
+    </SlidingDrawer>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_b"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:background="@drawable/rb_map_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="标准"
+            android:textColor="@color/rb_txt_selector"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/radio_w"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:background="@drawable/rb_map_right"
+            android:button="@null"
+            android:gravity="center"
+            android:text="卫星"
+            android:textColor="@color/rb_txt_selector"
+            android:textSize="12sp" />
+    </RadioGroup>
+</RelativeLayout>

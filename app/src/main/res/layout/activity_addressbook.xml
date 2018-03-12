@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.example.hcz.hechangzhi.AddressbookActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/bt_top_transparent"
+                android:drawableLeft="@drawable/home_icon_zoom"
+                android:drawablePadding="10dp"
+                android:hint="搜索"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:padding="7dp"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/contact_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:background="@android:color/white">
+
+
+            <com.example.hcz.util.SlidingLinearLayout
+                android:id="@+id/slidingview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true">
+
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srlEnableRefresh="false">
+
+                    <ListView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="#000000"
+                        android:divider="@null"
+                        android:fadingEdge="none"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        android:scrollingCache="false"
+                        android:visibility="visible" />
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            </com.example.hcz.util.SlidingLinearLayout>
+
+
+            <com.example.hcz.util.QuickAlphabeticBar
+                android:id="@+id/fast_scroller"
+                android:layout_width="22dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="top|right|center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:scaleType="centerInside" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fast_position"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_dialog_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="48sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</LinearLayout>

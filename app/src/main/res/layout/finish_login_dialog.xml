@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <TextView 
+        android:id="@+id/tv_dialog_body"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="您确定要退出登录吗？"
+        android:textColor="#313131"/>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorAccent"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/btn_finish_login_no"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:text="取消"/>
+        <View 
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:id="@+id/btn_finish_login_yes"
+            android:layout_width="0dp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="确定"/>
+    </LinearLayout>
+
+</LinearLayout>

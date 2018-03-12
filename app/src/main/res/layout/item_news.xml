@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ripple_bg_w"
+    android:gravity="center_vertical"
+    android:minHeight="90dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/newsImg"
+        android:layout_width="100dp"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/default_pic"
+        app:placeholderImageScaleType="centerCrop"
+        android:layout_height="75dp"
+        android:layout_marginLeft="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="华阴市黄河防治工程在全市全面开工啦啦啦啦啦"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/newSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:text="河长制办公室"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/newsTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:text="9-12 22:33"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

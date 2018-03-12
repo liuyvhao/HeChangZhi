@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3BC6BC</color>
+    <color name="colorPrimaryDark">#3BC6BC</color>
+    <color name="colorAccent">#dcdcdc</color>
+    <color name="colorrivertxt">#56b70b</color>
+    <color name="colorbg">#f5f5f5</color>
+    <color name="black">#000000</color>
+    <color name="color_radio_txt">#808080</color>
+    <color name="C5">#cccccc</color>
+    <color name="C6">#999999</color>
+    <color name="devider_line">#dcdcdc</color>
+    <color name="common_bg">#00000000</color>
+    <color name="red">#dc143c</color>
+    <color name="o">#ff6347</color>
+    <color name="blue">#0000ff</color>
+    <color name="river_blue">#6495ed</color>
+    <color name="cod">#ff00ff</color>
+
+    <color name="c1">#3BC6BC</color>
+    <color name="c2">#ff6347</color>
+    <color name="c3">#6495ed</color>
+    <color name="c4">#56b70b</color>
+    <color name="c5">#dc143c</color>
+    <color name="c6">#0000ff</color>
+    <color name="c7">#ff00ff</color>
+    <color name="c8">#ffa550</color>
+    <color name="c9">#dcdcdc</color>
+    <color name="c10">#00ced1</color>
+</resources>
